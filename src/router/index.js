@@ -6,25 +6,31 @@ Vue.use(VueRouter)
 
 const routes = [
   {
-    path: '',
+    path: '/profile/',
     name: 'Toobar',
     component: () => import('../components/Toolbar'),
     children: [
       {
-        path: '/about',
+        path: 'about',
         name: 'About',
         component: () => import('../views/About.vue')
       },
       {
-        path: '/test',
+        path: 'test',
         name: 'TestComponent',
         component: () => import('../components/TestComponent')
       },
       {
-        path: '/grade',
+        path: 'grade',
         name: 'GradeComponent',
         component: () => import('../components/GradeComponent')
+      },
+      {
+        path: 'insertfield',
+        name: 'GradeComponent',
+        component: () => import('../components/Insertfield')
       }
+
     ]
   },
   {

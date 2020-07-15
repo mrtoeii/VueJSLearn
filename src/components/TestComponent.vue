@@ -7,7 +7,7 @@
     </ul>
     <v-btn color="success" @click="display">show</v-btn> -->
     <v-row>
-      <v-col cols="12" sm="6" md="3">
+      <!-- <v-col cols="12" sm="6" md="3">
         <v-text-field
           label="Num1"
           placeholder="Num1"
@@ -22,6 +22,9 @@
           outlined
           v-model="num2"
         ></v-text-field>
+      </v-col> -->
+      <v-col cols="12" sm="6" md="3">
+        <insertfield :num="Word1" :title="HelloWorld"/>
       </v-col>
       <v-col cols="12" sm="6" md="3">
         <v-btn color="info" @click="showmessage">Login</v-btn>
@@ -31,7 +34,11 @@
 </template>
 
 <script>
+import insertfield from './Insertfield'
 export default {
+  components: {
+    insertfield
+  },
   data: () => ({
     Word1: 'New Normal',
     Word2: 2 + 1,
